@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Michelle Dai Giftastic</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style type="text/css">
+    #searchBar {
+        margin-top: 50px;
+    }
+</style>
+
+<script type="text/javascript" src="GIFtastic.js"></script>
+
+</head>
+<body>
+    <!--BUTTONS CONTAINER -->
+    <div class="container">
+        <!--Buttons -->
+        <div class="row" id="buttons">
+              <button type="button" class="btn btn-info" data-id='cat'>Cat</button>
+              <button type="button" class="btn btn-info" data-id='dog'>Dog</button>
+              <button type="button" class="btn btn-info" data-id='burger'>Burger</button>
+              <button type="button" class="btn btn-info" data-id='food'>Food</button>
+              <button type="button" class="btn btn-info" data-id='code'>Code</button>
+        </div>
+
+        <!--Search Bar -->
+        <div class="row" id="searchBar">
+              <div class="col-lg-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..." id="keyword-search">
+                    <span class="input-grosup-btn">
+                      <button class="btn btn-default" type="button" id="search-btn">Go!</button>
+                    </span>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <!--GIFS CONTAINER -->
+    <div class="container" id="gif-container">
+        <img id="gif1"> 
+    </div>
+
+
+
+</body>
+</html>
