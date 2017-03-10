@@ -27,10 +27,21 @@ function getGIFs() {
             }).done(function(response) {
                 for (var i = 0; i < 5; i++) {
                     console.log(response);
-                    var gifs = response.data[i].images.downsized.url;
-                    console.log(gifs);
-                    $('#gif-container').prepend(`<img src='${gifs}'>`);
-                    // $('#gif-co').
+                    var dataStill = response.data[i].images.downsized_still.url;
+                    var dataAnimate = response.data[i].images.preview_gif.url;
+                    var rating = response.data[i].rating;
+                    console.log(dataStill);
+                    console.log(dataAnimate);
+                    $('#gif-container').prepend(`
+                        <div class="img-container">
+                            <div>
+                                <div> Rating: ${rating}</div>
+                            </div>
+                            <img src='${dataStill}' data-still='${dataStill}' data-animate='${dataAnimate}' data-state='still' class='gifs'>
+                        </div>
+                    `);
+                    // $('#gif-container').prepend(`<p> Rating: ${rating} </p>`);
+
                 };
             });
 }
@@ -38,9 +49,6 @@ function getGIFs() {
 /*=====  End of Actions  ======*/
 
 
-/*====================================================
-=          Create New Buttons on-the-flight       =
-====================================================*/
 $('#add-btn').on('click', function(event) {
     event.preventDefault();
     $('#button-container').empty();
@@ -50,12 +58,21 @@ $('#add-btn').on('click', function(event) {
     $('#srch-term').val('');
 });
 
-
-/*=====  End of Create New Buttons on-flight  ======*/
-
 $(document).on("click", ".topic", function() {
         key = $(this).attr('data-id');
         console.log(key);
         getGIFs();
 });
+
+
+$(document).on('click', ".gifs", function(){
+    var state = $(this).attr('data-state');
+    if (state == 'still') {
+        $(this).attr('src', $(this).attr('data-animate'));
+        $(this).attr('data-state', 'animate');
+    } else {
+        $(this).attr('src', $(this).attr('data-still'));
+        $(this).attr('data-state','still');
+    }
+})
 createButton();
