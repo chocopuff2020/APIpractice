@@ -21,42 +21,84 @@
     #searchBar {
         margin-top: 50px;
     }
+    .btn {
+      margin-top: 50px;
+    }
+    .input-group {
+      width:70%;
+    }
+    .input-group-btn {
+      float:right;
+    }
+
+    img {
+      height:150px;
+      width: 150px;
+      border:8px solid lightgreen;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    /*.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+
+  img:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+
+  .text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }*/
 </style>
 
-<script type="text/javascript" src="GIFtastic.js"></script>
 
 </head>
 <body>
     <!--BUTTONS CONTAINER -->
     <div class="container">
         <!--Buttons -->
-        <div class="row" id="buttons">
-              <button type="button" class="btn btn-info" data-id='cat'>Cat</button>
-              <button type="button" class="btn btn-info" data-id='dog'>Dog</button>
-              <button type="button" class="btn btn-info" data-id='burger'>Burger</button>
-              <button type="button" class="btn btn-info" data-id='food'>Food</button>
-              <button type="button" class="btn btn-info" data-id='code'>Code</button>
+        <div id="button-container">
+
         </div>
 
         <!--Search Bar -->
         <div class="row" id="searchBar">
-              <div class="col-lg-6">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for..." id="keyword-search">
-                    <span class="input-grosup-btn">
-                      <button class="btn btn-default" type="button" id="search-btn">Go!</button>
-                    </span>
-                  </div>
-              </div>
+                  <form class="navbar-form" role="search">
+                    <div class="input-group add-on">
+                      <input class="form-control" placeholder="Type anything to create a button" name="srch-term" id="srch-term" type="text">
+                      <div class="input-group-btn">
+                        <button class="btn btn-info" type="submit" id="add-btn" > Add Button </button>
+                      </div>
+                    </div>
+                  </form>
         </div>
     </div>
 
     <!--GIFS CONTAINER -->
-    <div class="container" id="gif-container">
-        <img id="gif1"> 
+    <div class="container">
+        <div class="col-lg-6" id="gif-container"></div>
+
     </div>
 
 
 
+  <script type="text/javascript" src="GIFtastic.js"></script>
 </body>
 </html>
