@@ -1,9 +1,6 @@
 var topics = ['cat', 'dog', 'fitness', 'coffee', 'code'];
 var buttonContainer = document.getElementById('button-container');
 var input;
-
-
-
 var key ;
 
 /*=======================================
@@ -32,15 +29,8 @@ function getGIFs() {
                     var rating = response.data[i].rating;
                     console.log(dataStill);
                     console.log(dataAnimate);
-                    $('#gif-container').prepend(`
-                        <div class="img-container">
-                            <div>
-                                <div> Rating: ${rating}</div>
-                            </div>
-                            <img src='${dataStill}' data-still='${dataStill}' data-animate='${dataAnimate}' data-state='still' class='gifs'>
-                        </div>
+                    $('#gif-container').prepend(`<div class="img-container"><div><div id='rating'> Rating: --> ${rating}</div></div><img src='${dataStill}' data-still='${dataStill}' data-animate='${dataAnimate}' data-state='still' class='gifs'></div>
                     `);
-                    // $('#gif-container').prepend(`<p> Rating: ${rating} </p>`);
 
                 };
             });
@@ -48,6 +38,9 @@ function getGIFs() {
 
 /*=====  End of Actions  ======*/
 
+/*==============================
+=            ONLICK            =
+==============================*/
 
 $('#add-btn').on('click', function(event) {
     event.preventDefault();
@@ -76,3 +69,7 @@ $(document).on('click', ".gifs", function(){
     }
 })
 createButton();
+
+
+/*=====  End of ONLICK  ======*/
+

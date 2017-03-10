@@ -17,6 +17,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Jura|VT323" rel="stylesheet">
 
 <style type="text/css">
     
@@ -30,11 +31,28 @@
     body {
         background-color: rgba(255, 0, 0, 0);
     }
+    h1 {
+      width:100px;
+      margin-left: 250px;
+      color:white;
+      font-size: 102px;
+      /*font-family: 'Amatic SC', cursive;*/
+      font-family: 'VT323', monospace;
+    }
+    
+    h3 {
+      font-family: 'VT323', monospace;
+      font-size: 30px;
+      color:white;
+      margin-left: 45%;
+      margin-top: -20px;
+    }
+
     #searchBar {
         margin-top: 50px;
     }
     .btn {
-      margin-top: 50px;
+      margin-top: 30px;
     }
     .input-group {
       width:70%;
@@ -47,16 +65,21 @@
       margin-top: -35px;
       margin-left: 100px;
     }
-    p {
+    #rating {
       width:100px;
       display:;
+      color:white;
+      font-size: 32px;
+      /*font-family: 'Amatic SC', cursive;*/
+      font-family: 'VT323', monospace;
+      /*font-family: 'Jura', sans-serif;*/
     }
     img {
       height:150px;
       width: 150px;
-      border:8px solid lightgreen;
+      border:8px solid white;
       border-radius: 50%;
-      margin: 10px;
+      margin: 20px;
     }
   
     .img-container {
@@ -73,6 +96,8 @@
 
 </head>
 <body>
+    <h1> GIFTSTASTIC</h1>
+    <h3> by Michelle D </h3>
     <!--BUTTONS CONTAINER -->
     <div class="container">
         <!--Buttons -->
@@ -95,7 +120,7 @@
 
     <!--GIFS CONTAINER -->
     <div class="container">
-        <div class="col-lg-6" id="gif-container"></div>
+        <div class="col-lg-10" id="gif-container"></div>
 
     </div>
 
